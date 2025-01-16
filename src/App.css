@@ -1,0 +1,314 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+  background: radial-gradient(circle, rgba(10,14,29,1) 0%, rgba(2,2,26,1) 100%);
+  color: #ffffff;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Navigation Bar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  font-size: 1.2rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Main Section */
+.main {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  text-align: left;
+  flex-direction: row;
+  position: relative;
+}
+
+.main h1 {
+  font-size: 3rem;
+  animation: textFade 3s infinite;
+}
+
+@keyframes textFade {
+  0%, 100% {
+      color: #00bcd4;
+  }
+  50% {
+      color: #ffffff;
+  }
+}
+
+.main p {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.main button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  color: #ffffff;
+  background: #00bcd4;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.main button:hover {
+  background: #007a8c;
+}
+
+.screenshot {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  width: 300px;
+  height: 400px;
+  transform: translateY(-50%) rotateY(-15deg);
+  box-shadow: -10px 10px 30px rgb(0 0 0);
+  border-radius: 10px;
+  background: linear-gradient(180deg, #000000 0%, #142144 100%);
+  animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% {
+      transform: translateY(-50%) rotateY(-15deg) translateX(0);
+  }
+  50% {
+      transform: translateY(-48%) rotateY(-15deg) translateX(-10px);
+  }
+}
+
+
+/* General Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+.features-container {
+  padding: 50px 20px;
+  text-align: center;
+  background: transparent;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease-in-out, transform 2s ease-in-out;
+}
+
+
+.features-container.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.features-container.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.features-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #00bcd4;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centered layout */
+  gap: 15px;
+}
+
+.feature-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  width: 200px;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  color: #00bcd4;
+  margin-bottom: 10px;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.feature-description {
+  font-size: 0.9rem;
+  color: #cfcfcf;
+  line-height: 1.4;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .features-title {
+    font-size: 1.8rem;
+  }
+  .feature-title {
+    font-size: 1rem;
+  }
+  .feature-description {
+    font-size: 0.85rem;
+  }
+}
+
+
+/* General Responsive Styles */
+@media (max-width: 1200px) {
+  .main h1 {
+      font-size: 2.5rem;
+  }
+  .main p {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+ 
+  .screenshot {
+    right: auto;
+    top: 60%
+  }
+  .main {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .screenshot {
+      right: auto;
+      top: 60%;
+  }
+  .main h1 {
+      font-size: 2rem;
+  }
+  .main button {
+      font-size: 1rem;
+      padding: 8px 16px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .dow-text {
+    margin-top: 10px;
+  }
+  .screenshot {
+    right:auto;
+    top: 55%;
+}
+  .main h1 {
+      font-size: 1.5rem;
+  }
+  .main p {
+      font-size: 0.9rem;
+  }
+  .main button {
+      font-size: 0.9rem;
+      padding: 8px 12px;
+  }
+}
+
+/* Device-Specific Styles */
+
+/* iPhone 12 Pro (390px x 844px) */
+@media (min-width: 390px) and (max-width: 390px) and (min-height: 844px) and (max-height: 844px) {
+  .screenshot {
+    right: 10%;
+    top: 50%;
+}
+.dow-text {
+  margin-top: 10px;
+}
+
+}
+
+
+/* @media  (max-width: 900px) {
+  .screenshot {
+    right: auto;
+    top: 50%;
+}
+}
+
+@media (min-width: 600px) {
+  .screenshot {
+      right: 10%;
+      top: 50%;
+  } */
+/* 
+  .dow-text {
+    margin-top: 10px;
+  }
+} */

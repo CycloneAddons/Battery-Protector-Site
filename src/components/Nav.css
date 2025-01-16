@@ -1,0 +1,67 @@
+.bg-body-tertiary {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.topp{
+top: 0 !important;
+}
+.navbar {
+  --bs-navbar-color: white;
+    --bs-navbar-hover-color: rgb(67 157 182 / 92%);
+    --bs-navbar-disabled-color: rgba(var(--bs-emphasis-color-rgb), 0.3);
+    --bs-navbar-active-color: rgb(82 199 231 / 100%);
+    --bs-navbar-brand-padding-y: 0.3125rem;
+    --bs-navbar-brand-margin-end: 1rem;
+    --bs-navbar-brand-font-size: 1.45rem;
+    --bs-navbar-brand-color: rgb(255 255 255);
+    --bs-navbar-brand-hover-color: rgb(82 199 231 / 100%);
+}
+
+.navbar-toggler {
+  
+  color: #097d8c;
+  background-color: #44e1f5cf;
+  border: var(--bs-border-width) solid rgb(0 0 0 / 0%);
+}
+
+
+.navbar-collapse {
+  flex-grow: 0;
+}
+/* .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar ul li {
+    font-size: 1.2rem;
+  }
+  
+  .navbar ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar ul li a:hover {
+    color: #00bcd4;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff;
+  }
+   */

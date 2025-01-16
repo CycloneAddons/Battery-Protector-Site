@@ -1,0 +1,15 @@
+{
+  "short_name": "Battery Protector",
+  "name": "Battery Protector is a lightweight software for Windows that alerts the user when the battery reaches 80% and plays music until the charger is unplugged.",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
