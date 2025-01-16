@@ -17,7 +17,7 @@ This is the official website repository for **Battery Protector** software. The 
 ## 🌐 Website
 
 You can visit the live website here:  
-[**Battery Protector Official Website**](https://batteryprotecor.me)
+[**Battery Protector Official Website**](https://batteryprotector.me)
 
 ---
 
